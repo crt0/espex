@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "espex"
+version = "0.1.0"
+description = "Export espanso rules to other formats (currently only Apple text replacement plist)"
+authors = ["Andrew Korty <ajk@ajk.beer>"]
+readme = "README.md"
+packages = [{include = "espex", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyyaml = "^6.0.1"
+
+[tool.poetry.scripts]
+espex = "espex.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
